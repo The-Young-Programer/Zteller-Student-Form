@@ -1,0 +1,230 @@
+
+        
+        
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            font-size: 1em;
+            font-family: 'Boing', sans-serif;
+            background-color: rgba(234, 246, 252, 0.95);
+        }
+        h1{
+            text-align: center;
+            font-size: 1.5em;
+        }
+        #signUpForm {
+            max-width: 500px;
+            background-color: #ffffff;
+            margin: 40px auto;
+            padding: 40px;
+            box-shadow: 0px 6px 18px rgb(0 0 0 / 9%);
+            border-radius: 12px;
+        }
+
+        
+.form-header1 {
+  text-align: center;
+  margin-top: 45px;
+}
+  .form-header1 a {
+    font-family: "Boing";
+    color: #fff;
+    display: inline-block;
+    text-decoration:none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: rgb(65, 170, 94); 
+}
+#the-radio{
+    display: flex;
+   
+}
+
+
+        #signUpForm .form-header {
+            display: flex;
+            gap: 5px;
+            text-align: center;
+            font-size: .9em;
+        }
+        #signUpForm .form-header .stepIndicator {
+            position: relative;
+            flex: 1;
+            padding-bottom: 30px;
+        }
+        #signUpForm .form-header .stepIndicator.active {
+            font-weight: 600;
+        }
+        #signUpForm .form-header .stepIndicator.finish {
+            font-weight: 600;
+            color: rgb(65, 170, 94);
+        }
+        #signUpForm .form-header .stepIndicator::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            z-index: 9;
+            width: 15px;
+            height: 15px;
+            background-color: #d5efed;
+            border-radius: 50%;
+            border: 3px solid #ecf5f4;
+        }
+        #signUpForm .form-header .stepIndicator.active::before {
+            background-color: #a7ede8;
+            border: 3px solid #d5f9f6;
+        }
+        #signUpForm .form-header .stepIndicator.finish::before {
+            background-color: rgb(65, 170, 94);
+            border: 3px solid #b7e1dd;
+        }
+        #signUpForm .form-header .stepIndicator::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 9px;
+            width: 100%;
+            height: 3px;
+            background-color: #f3f3f3;
+        }
+        #signUpForm .form-header .stepIndicator.active::after {
+            background-color: #a7ede8;
+        }
+        #signUpForm .form-header .stepIndicator.finish::after {
+            background-color: rgb(65, 170, 94);
+        }
+        #signUpForm .form-header .stepIndicator:last-child:after {
+            display: none;
+        }
+
+        #signUpForm p{
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .mb-15{
+            margin-bottom: 15px;
+        }
+        
+        #signUpForm input {
+            padding: 15px 20px;
+            width: 100%;
+            font-size: 1em;
+            border: 1px solid #e3e3e3;
+            border-radius: 5px;
+        }
+        #signUpForm input:focus {
+            border: 1px solid rgb(65, 170, 94);
+            outline: 0;
+        }
+        #signUpForm input.invalid {
+            border: 2px solid #ffaba5;
+        }
+        #signUpForm .step {
+          display: none;
+        }
+        #signUpForm .form-footer{
+            overflow:auto;
+            display: flex;
+            gap: 20px;
+        }
+        #signUpForm .form-footer button{
+            background-color: rgb(65, 170, 94);
+            border: 1px solid rgb(65, 170, 94) !important;
+            color: #ffffff;
+            border: none;
+            padding: 13px 30px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 25px;
+            flex: 1;
+            margin-top: 5px;
+        }
+        #signUpForm .form-footer button:hover {
+          opacity: 0.8;
+        }
+        
+        #signUpForm .form-footer #prevBtn {
+            background-color: #fff;
+            color: rgb(65, 170, 94);
+        }
+
+        select {
+    padding: 15px 20px;
+    width: 100%;
+    font-size: 1em;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%2365aa5e" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 10px);
+    background-position-y: center;
+    background-size: 24px;
+    cursor: pointer;
+}
+
+
+.custom-select {
+    padding: 15px 20px;
+    width: 100%;
+    font-size: 1em;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%2365aa5e" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 10px);
+    background-position-y: center;
+    background-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Hide the default arrow in Firefox */
+.custom-select::-ms-expand {
+    display: none;
+}
+
+.custom-select:focus {
+    border: 1px solid rgb(65, 170, 94);
+    outline: 0;
+}
+
+
+.custom-select.invalid {
+    border: 2px solid #ffaba5; /* Red border color */
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    
+}
+
+.radio-label input[type="radio"] {
+    margin-right: 5px; /* Adjust spacing between radio button and label */
+    border-color: rgb(65, 170, 94);
+}
+
+.radio-label input[type="radio"]:checked {
+    /* Change background color when checked */
+    background-color: rgb(65, 170, 94);
+}
+
+
+#display{
+    
+    display: flex;
+}

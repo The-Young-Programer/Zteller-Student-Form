@@ -1,0 +1,198 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Receipt | Zteller.com</title>
+</head>
+
+<body class="sm:bg-gray-300">
+    <div class="w-full sm:w-[620px] sm:py-3 my-5 rounded-sm h-full sm:h-fit mx-auto bg-white relative">
+        <header class="mx-5 mt-5 flex flex-row justify-between items-center">
+            <div class="w-[80px] h-[80px]">
+                <img src="uniben-logo.png" />
+            </div>
+            <div class="text-center text-black">
+                <p class="text-2xl font-bold">{{schoolName}}</p>
+                <p>{{association}}</p>
+                <p></p>
+            </div>
+            <div class="w-[80px] h-[80px]">
+                <img src="uniben-logo.png">
+            </div>
+        </header>
+
+        <div class="mx-5 mt-5 px-3 ">
+            <div class="flex flex-row justify-between font-bold">
+                <p>Payment Receipt</p>
+                <p><%= paymentStatus %></p>
+            </div>
+            <img src="REceipt Gradient Line .png">
+        </div>
+
+        <div class="text-[12px] text-center mt-2 font-mono">
+            <p class="font-bold">{{paymentID}}</p>
+            <p>Visit <a href="zzz.zteller.com">www.zteller.com/verify</a> to validate payment</p>
+        </div>
+
+        <main class="mx-5 my-5 flex flex-col gap-3 justify-center items-center font-mono">
+            <div class="py-3 w-[93%] h-[fit] sm:w-[500px] sm:h-[200px] rounded-lg bg-gray-300 text-black flex flex-row justify-between items-center">
+                <div class="h-full flex flex-col gap-[1px] ml-4 justify-center text-[12px]">
+                    <img class="w-[170px] my-2" src="REceipt Student Information.png">
+                    <p><span class="font-bold">Name:</span> <%= fullName %></p>
+                    <p><span class="font-bold">Faculty:</span> <%= faculty %></p>
+                    <p><span class="font-bold">Department:</span> <%= department %></p>
+                    <p><span class="font-bold">Level:</span> <%= level %></p>
+                    <p><span class="font-bold">Mat No:</span> {{matNumber}}</p>
+                    <p><span class="font-bold">Entry Mode: </span> <%= entryMode %></p>
+                    <p><span class="font-bold">Phone Number: </span> <%= phoneNumber %></p>
+                </div>
+            </div>
+
+            <div class="w-[93%] h-fit py-5 sm:w-[500px] sm:h-[225px] rounded-lg bg-gray-300 text-black flex flex-row justify-between relative z-[2]">
+                <div class="h-full flex flex-col gap-[1px] ml-4 justify-center text-[12px] pb-5">
+                    <img class="w-[150px] my-2" src="REceipt Payment Information.png">
+                    <p><span class="font-bold">Payment Date:</span> {{paymentDate}}</p>
+                    <p><span class="font-bold">Payment Time: </span> {{paymentTime}}</p>
+                    <p><span class="font-bold">Payment ID:</span> {{paymentID}}</p>
+                    <p><span class="font-bold">Payment Type:</span> {{status}}</p>
+                    <p><span class="font-bold">Amount(NGN):</span> ₦{{amountPaid}}</p>
+                    <p><span class="font-bold">Charges(NGN):</span> 100</p>
+                    <p><span class="font-bold">VAT:</span> 0.00</p>
+                    <p><span class="font-bold">Payment Channel:</span> Paystack</p>
+                </div>
+                <div class="text-[12px] text-center h-fit flex flex-col items-center my-auto mx-auto mr-6">
+                    <img src="qrcode.png" class="w-[100px] h-[100px]" />
+                    <p>SCAN ME!</p>
+                    <p>to validate payment ID</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="mx-5 relative z-[2]">
+            <div class="mt-2 font-bold mb-8 flex w-[80%] sm:w-[40%] mx-auto gap-3 flex-row items-center justify-between">
+                <img class="w-[70px] relative z-[2]" src="REceipt Total.png">
+                <div class="border-2 border-black w-2/3 h-[1px]"></div>
+                <p><%= amountPaid %></p>
+            </div>
+            <div class="w-fit mt-10 mb-8 mx-auto text-sm flex flex-row">
+                <span>Powered by: </span>
+                <img src="Ztellalogo (1).png" class="w-[50px]">
+            </div>
+        </footer>
+
+        <div class="absolute bottom-0 left-0 flex items-end justify-start z-[1]">
+            <img src="REceipt Backround Swirl.png" alt="Background design" class="h-[400px] w-[370px] bottom-[-20px]">
+        </div>
+    </div>
+    <div class="text-center mt-5">
+        <a href="/download-receipt/{{paymentID}}" class="bg-blue-500 text-white py-2 px-4 rounded">Download Receipt</a>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>
+ -->
+<!-- 
+// receipt.ejs -->
+
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Receipt | Zteller.com</title>
+</head>
+
+<body class="sm:bg-gray-300">
+    <div class="w-full sm:w-[620px] sm:py-3 my-5 rounded-sm h-full sm:h-fit mx-auto bg-white rounded-[200px] relative">
+        <header class="mx-5 mt-5 flex flex-row justify-between items-center">
+            <div class="w-[80px] h-[80px]">
+                <img src="uniben-logo.png" />
+            </div>
+            <div class="text-center text-black">
+                <p class="text-2xl font-bold"><%= school %></p>
+                <p><%= association %></p>
+                <p><%= association %></p>
+            </div>
+            <div class="w-[80px] h-[80px]">
+                <img src="uniben-logo.png">
+            </div>
+        </header>
+
+        <div class="mx-5 mt-5 px-3 ">
+            <div class="flex flex-row justify-between font-bold">
+                <p>Payment Receipt</p>
+                <p>Paystack</p> <!-- Fixed payment type -->
+            </div>
+            <img src="REceipt Gradient Line .png">
+        </div>
+
+        <div class="text-[12px] text-center mt-2 font-mono">
+            <p><span class="font-bold">Payment ID:</span> <%= transaction_id %></p> <!-- Payment ID -->
+            <p>Visit <a href="zteller.com/verify">www.zteller.com/verify</a> to validate payment</p>
+        </div>
+
+        <main class="mx-5 my-5 flex flex-col gap-3 justify-center items-center font-mono">
+            <div class="py-3 w-[93%] h-[fit] sm:w-[500px] sm:h-[200px] rounded-lg bg-gray-300 text-black flex flex-row justify-between items-center">
+                <div class="h-full flex flex-col gap-[1px] ml-4 justify-center text-[12px]">
+                    <img class="w-[170px] my-2" src="REceipt Student Information.png">
+                    <p><span class="font-bold">Name:</span> <%= first_name %> <%= last_name %> <%= othername %></p>
+                    <p><span class="font-bold">Faculty:</span> <%= faculty %></p>
+                    <p><span class="font-bold">Department:</span> <%= department %></p>
+                    <p><span class="font-bold">Level:</span> <%= level %></p>
+                    <p><span class="font-bold">Mat No:</span> <%= mat_number %></p>
+                    <p><span class="font-bold">Entry Mode: </span>
+                        <%= entry %>
+                    </p>
+                    <p><span class="font-bold">Phone Number:</span> <%= phone_number %></p>
+                </div>
+            </div>
+
+            <div class="w-[93%] h-fit py-5 sm:w-[500px] sm:h-[225px] rounded-lg bg-gray-300 text-black flex flex-row justify-between relative z-[2]">
+                <div class="h-full flex flex-col gap-[1px] ml-4 justify-center text-[12px] pb-5">
+                    <img class="w-[150px] my-2" src="REceipt Payment Information.png">
+                    <p><span class="font-bold">Payment Date:</span> <%= payment_date %></p>
+                    <p><span class="font-bold">Payment Time:</span> <%= payment_time %></p>
+                    <p><span class="font-bold">Payment ID:</span> <%= transaction_id %></p>
+                    <p>
+                        <span class="font-bold">Payment Type:</span>
+                        <%= association %>
+                    </p>
+                    <p><span class="font-bold">Amount(NGN):</span> <%= amount %></p>
+                    <p><span class="font-bold">Charges(NGN):</span> <%= charges %></p>
+                    <p><span class="font-bold">VAT:</span> <%= VAT %></p>
+                    <p><span class="font-bold">Payment Channel:</span> Paystack</p>
+                    
+                </div>
+                <div class="text-[12px] text-center h-fit flex flex-col items-center my-auto mx-auto mr-6">
+                    <img src="qrcode.png" class="w-[100px] h-[100px] " />
+                    <p>SCAN ME!</p>
+                    <p>to validate payment ID</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="mx-5 relative z-[2]">
+            <div class="mt-2 font-bold mb-8 flex w-[80%] sm:w-[40%] mx-auto gap-3 flex-row items-center justify-between">
+                <img class="w-[70px] relative z-[2]" src="REceipt Total.png">
+                <div class="border-2 border-black w-2/3 h-[1px] relative top-4"></div>
+                <p> <%= totalAmount %></p>
+                
+            </div>
+            <div class="w-fit mt-10 mb-8 mx-auto text-sm flex flex-row">
+                <span>Powered by: </span>
+                <img src="Ztellalogo (1).png" class="w-[50px]">
+            </div>
+        </footer>
+
+        <div class="absolute bottom-0 left-0 flex items-end justify-start z-[1]">
+            <img src="REceipt Backround Swirl.png" alt="Background design" class="h-[400px] w-[370px] bottom-[-20px]">
+        </div>
+    </div>
+</body>
+
+</html>

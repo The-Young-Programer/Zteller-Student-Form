@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Student Form | Zteller</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="nemonet-profile.netlify.app">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.png"/>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+   
+
+    <link rel="stylesheet" href="./styles.css">
+
+    
+
+</head>
+<body>
+    <div class="form-header1">
+        <a href="https://zteller.com/" style="background-color: unset;">
+            <img src="./Ztellalogo.png" width="180px" alt="Zteller logo">
+        </a>
+        <br><br>
+        <a href="https://dashboard.zteller.com/">Sign-up as Administrator</a>
+    </div>
+
+    <form id="signUpForm" action="">
+        <!-- start step indicators -->
+        <div class="form-header">
+            <span class="stepIndicator"> </span>
+            <span class="stepIndicator"> </span>
+            <span class="stepIndicator"> </span>
+        </div>
+        <!-- end step indicators -->
+        <br><br>
+        <!-- step one -->
+        <div class="step">
+            <p>Fill in your school info correctly</p>
+            <div class="mb-15">        
+                <select id="firstDropdown" name="school" oninput="this.className = ''">
+                    <option value="" selected disabled>Select School</option>
+                    <option value="University of Benin">University of Benin</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div> 
+            <div class="mb-15">
+                <select id="secondDropdown" name="faculty" class="custom-select" oninput="updateDepartments()">
+                    <option value="" selected disabled>Select Faculty</option>
+                    <option value="physicalScience">Physical Science</option>
+                    <option value="agriculture" disabled>Agriculture</option>
+                    <option value="arts" disabled>Arts</option>
+                    <option value="education" disabled>Education</option>
+                    <option value="engineering" disabled>Engineering</option>
+                    <option value="law" disabled>Law</option>
+                    <option value="lifeSciences" disabled>Life Sciences</option>
+                    <option value="managementScience" disabled>Management Science</option>
+                    <option value="pharmacy" disabled>Pharmacy</option>
+                    
+                    <option value="socialScience" disabled>Social Science</option>
+                    <option value="collegeOfMedicine" disabled>College of Medicine</option>
+                    <option value="veterinaryMedicine" disabled>Veterinary Medicine</option>
+                </select>
+            </div>
+            <div class="mb-15">
+                <select id="thirdDropdown" name="department" class="custom-select" oninput="this.className = ''">
+                    <option value="" selected disabled>Select Department</option>
+                </select>
+            </div>
+            <div class="mb-15">        
+                <select id="entry-mode" name="entry" oninput="this.className = ''">
+                    <option value="" selected disabled>Entry Mode</option>
+                    <option value="Full Time">Full Time</option>
+                    <option value="Direct Entry">Direct Entry</option>
+                    <option value="Part-Time">Part-Time</option>
+                   
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="mb-15">
+                <select id="fourthDropdown" name="level" class="custom-select" oninput="this.className = ''">
+                    <option value="" selected disabled>Select Level</option>
+                    <option value="100L" >100L</option>
+                    <option value="200L" >200L</option>
+                    <option value="300L" >300L</option>
+                    <option value="400L" >400L</option>
+                    <option value="500L" >500L</option>
+                    <option value="600L" >600L</option> 
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="mb-15">
+                <select id="fifthDropdown" name="payment" class="custom-select" oninput="this.className = ''">
+                    <option value="" selected disabled>Select Payment</option>
+                    <option value="Faculty Dues" >Faculty Dues</option>
+                    <option value="Departmental Dues" >Departmental Dues</option>
+                    <option value="Maintenance Dues" >Maintenance Dues</option>
+                    <option value="Class Dues" >Class Dues</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+               <div class="mb-15">
+                <select id="association" name="association" class="custom-select" oninput="this.className = ''">
+                    <option value="" selected disabled>Select Association</option>
+                   
+                </select>
+                
+            </div>
+        </div>
+
+        <!-- step two -->
+        <div class="step">
+            <p>Fill in your personal info correctly</p>
+            <div class="mb-15">
+                <input type="text" placeholder="Firstname" oninput="this.className = ''" name="first_name" id="first_name">
+            </div>
+            <div class="mb-15">
+                <input type="text" placeholder="Lastname" oninput="this.className = ''" name="last_name" id="last_name">
+            </div>
+            <div class="mb-15">
+                <input type="text" placeholder="Othername" oninput="this.className = ''" name="othername" id="othername">
+            </div>
+            <div class="mb-15">
+                <input 
+                    type="email" 
+                    placeholder="Email Address" 
+                    oninput="this.className = ''" 
+                    name="email" 
+                    pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" 
+                    required
+                    id="email">
+            </div>
+            
+            
+            <div class="mb-15">
+                <input 
+                    type="tel" 
+                    pattern="[0-9]{10,11}" 
+                    maxlength="11" 
+                    inputmode="numeric" 
+                    placeholder="Phone Number" 
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')" 
+                    name="phone"
+                    id="phone">
+            </div>
+            <div class="mb-15">
+                <input type="text" placeholder="Matric Number" oninput="this.className = ''" name="mat_number" id="mat_number">
+            </div>
+            <!-- <div class="mb-15 radio-group">
+                  
+                <label for="direct-entry" class="radio-label"> <input type="radio" id="direct-entry" name="entry" value="direct-entry"/>DirectEntry</label>
+               
+                <label for="staylite" class="radio-label"> <input type="radio" id="staylite" name="entry" value="staylite"/>Staylite</label><br>
+             </div>
+             <div class="mb-15 radio-group">
+               
+                <label for="fulltime" class="radio-label"> <input type="radio"  name="student-type" value="fulltime"/>Fulltime</label>
+                
+                <label for="part-time" class="radio-label"><input type="radio" id="part-time" name="student-type" value="part-time"/>PartTimesss</label>
+             </div>
+         </div> -->
+            <div class="mb-15 radio-group">
+                <label class="radio-label"><input type="radio" name="gender" value="male" id="male"> Male</label>
+                <label class="radio-label"><input type="radio" name="gender" value="female" id="female"> Female</label>
+            </div>
+        </div>
+        
+        <!-- step three -->
+        <div class="step" id="display-step" >
+            <p>Please review your information below:</p>
+            <div class="mb-15" id="reviewSection"  >
+                
+            </div>
+        </div>
+
+        <!-- start previous / next buttons -->
+        <div class="form-footer">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+            <!-- <button type="submit" style="display:none;">Submit</button> -->
+        </div>
+        <!-- end previous / next buttons -->
+    </form>
+
+   
+    <script src="./script.js"></script>
+</body>
+</html>
