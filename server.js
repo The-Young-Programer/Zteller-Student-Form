@@ -217,7 +217,11 @@ const path = require('path');
 const ejs = require('ejs'); // Use EJS for templating
 
 // Initialize Firebase Admin SDK
-const serviceAccount = require('./serviceAccountKey.json');
+// const serviceAccount = require('./serviceAccountKey.json');
+
+const serviceAccountBase64 = process.env.FIREBASE_SERVICE_ACCOUNT_KEY;
+const serviceAccountBuffer = Buffer.from(serviceAccountBase64, 'base64');
+const serviceAccount = JSON.parse(serviceAccountBuffer.toString());
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
