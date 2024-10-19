@@ -3,6 +3,10 @@ node_modules/
 
 serviceAccountKey.json
 
+base64_serviceAccountKey.txt
+
+.hintrc
+
 
 # Environment variable files
 .env
