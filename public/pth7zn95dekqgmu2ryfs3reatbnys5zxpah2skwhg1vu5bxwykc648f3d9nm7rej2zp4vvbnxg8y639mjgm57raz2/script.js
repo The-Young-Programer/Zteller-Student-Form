@@ -369,8 +369,8 @@ function updateAssociations() {
       { value: "FINSAN", text: "Finance Students Association of Nigeria (FINSAN)" }
     ],
     physicalScience: [
-      { value: "FAPSSA", text: "Faculty of Physical Science Students Association (FAPSSA)" },
-      { value: "NACOSS", text: "National Association of Computing Students (NACOSS)" },
+      { value: "Faculty of Physical Science Students Association (FAPSSA)", text: "Faculty of Physical Science Students Association (FAPSSA)" },
+      { value: "National Association of Computing Students (NACOSS)", text: "National Association of Computing Students (NACOSS)" },
       { value: "NAPS", text: "National Association of Physics Students (NAPS)" },
       { value: "NAMSN", text: "National Association of Mathematics Students of Nigeria (NAMSN)" },
       { value: "SCSN", text: "Students Chemical Society of Nigeria (SCSN)" },
