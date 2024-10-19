@@ -50,12 +50,6 @@ function nextPrev(n) {
 //////////////////////////////////////////////////////////////
 
 
-
-
-
-
-// script.js
-// Form submission logic
 function submitForm() {
   // Create an object to hold form data
   const formData = {};
@@ -81,10 +75,10 @@ function submitForm() {
         // Construct the payment URL with pre-filled parameters
         const { first_name, last_name, email, mat_number, association } = formData;
         
-        // Add studentId to metadata for tracking
-        const paymentUrl = `${data.paymentLink}?first_name=${encodeURIComponent(first_name)}&last_name=${encodeURIComponent(last_name)}&email=${encodeURIComponent(email)}&mat_number=${encodeURIComponent(mat_number)}&association=${encodeURIComponent(association)}&metadata={"studentId":"${data.studentId}"}&readonly=email,mat_number,association,first_name,last_name`;
+        // Append the form data as query parameters to the Paystack URL
+        const paymentUrl = `${data.paymentLink}?first_name=${encodeURIComponent(first_name)}&last_name=${encodeURIComponent(last_name)}&email=${encodeURIComponent(email)}&mat_number=${encodeURIComponent(mat_number)}&association=${encodeURIComponent(association)}&readonly=email,mat_number,association,first_name,last_name`;
         
-        // Redirect to Paystack payment page
+        // Redirect to the Paystack payment page
         window.location.href = paymentUrl;
       } else {
         alert('Error submitting form. Please try again.');
@@ -95,6 +89,8 @@ function submitForm() {
       alert('Error submitting form. Please try again.');
     });
 }
+
+
 
 
 
@@ -477,5 +473,3 @@ function populateReviewSection() {
     }
   }
 }
-
-
